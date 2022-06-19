@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part  'dto_house.g.dart';
+part 'dto_house.g.dart';
 
 @JsonSerializable()
 class DTOHouse {

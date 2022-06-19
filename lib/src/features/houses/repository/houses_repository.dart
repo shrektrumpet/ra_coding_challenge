@@ -9,7 +9,7 @@ class HousesRepository {
     required GotRetrofit gotRetrofit,
   }) : _gotRetrofit = gotRetrofit;
 
-  Future<List<House>> getPageOfHousesWithoutDetails(int pageIndex) async {
+  Future<List<House>> getPageOfHouses(int pageIndex) async {
     final List<House> allHouses = [];
     final pageOfDtoHouses = await _gotRetrofit.getListOfHouses(pageIndex, 50);
     for (var dtoHouse in pageOfDtoHouses) {
@@ -31,14 +31,18 @@ class HousesRepository {
 
     final currentLordName = currentLordNameId.isEmpty ? "" : (await _gotRetrofit.getCharacter(currentLordNameId)).name;
     final heirName = heirNameId.isEmpty ? "" : (await _gotRetrofit.getCharacter(heirNameId)).name;
-    final overlordName =overlordNameId.isEmpty ? "" :  (await _gotRetrofit.getHouse(overlordNameId)).name;
+    final overlordName = overlordNameId.isEmpty ? "" : (await _gotRetrofit.getHouse(overlordNameId)).name;
     final founderName = founderNameId.isEmpty ? "" : (await _gotRetrofit.getCharacter(founderNameId)).name;
-    final cadetBranchesNames = cadetBranchesNamesIds.isEmpty ? <String>[] :  await Future.wait(cadetBranchesNamesIds.map((e) async {
-      return (await _gotRetrofit.getHouse(e)).name;
-    }).toList());
-    final swornMembersNames = swornMembersNamesIds.isEmpty ? <String>[] : await Future.wait(swornMembersNamesIds.map((e) async {
-      return (await _gotRetrofit.getCharacter(e)).name;
-    }).toList());
+    final cadetBranchesNames = cadetBranchesNamesIds.isEmpty
+        ? <String>[]
+        : await Future.wait(cadetBranchesNamesIds.map((e) async {
+            return (await _gotRetrofit.getHouse(e)).name;
+          }).toList());
+    final swornMembersNames = swornMembersNamesIds.isEmpty
+        ? <String>[]
+        : await Future.wait(swornMembersNamesIds.map((e) async {
+            return (await _gotRetrofit.getCharacter(e)).name;
+          }).toList());
 
     final detailedHouse = house.copyWith(
       currentLordName: currentLordName,

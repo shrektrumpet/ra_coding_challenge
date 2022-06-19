@@ -13,7 +13,7 @@ class HousesCubit extends Cubit<HousesState> {
   void getPageOfHouses(int page) async {
     emit(HousesLoading());
     try {
-      final allHouses = await housesRepository.getPageOfHousesWithoutDetails(page);
+      final allHouses = await housesRepository.getPageOfHouses(page);
       emit(HousesLoaded(houses: allHouses));
     } on Exception catch (e) {
       emit(HousesError());

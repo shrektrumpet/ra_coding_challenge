@@ -12,8 +12,7 @@ DTOHouse _$DTOHouseFromJson(Map<String, dynamic> json) => DTOHouse(
       region: json['region'] as String,
       coatOfArms: json['coatOfArms'] as String,
       words: json['words'] as String,
-      titles:
-          (json['titles'] as List<dynamic>).map((e) => e as String).toList(),
+      titles: (json['titles'] as List<dynamic>).map((e) => e as String).toList(),
       seats: (json['seats'] as List<dynamic>).map((e) => e as String).toList(),
       currentLordUrl: json['currentLord'] as String,
       heirUrl: json['heir'] as String,
@@ -21,15 +20,9 @@ DTOHouse _$DTOHouseFromJson(Map<String, dynamic> json) => DTOHouse(
       founded: json['founded'] as String,
       founderUrl: json['founder'] as String,
       diedOut: json['diedOut'] as String,
-      ancestralWeapons: (json['ancestralWeapons'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      cadetBranchesUrls: (json['cadetBranches'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      swornMembersUrls: (json['swornMembers'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
+      ancestralWeapons: (json['ancestralWeapons'] as List<dynamic>).map((e) => e as String).toList(),
+      cadetBranchesUrls: (json['cadetBranches'] as List<dynamic>).map((e) => e as String).toList(),
+      swornMembersUrls: (json['swornMembers'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
 Map<String, dynamic> _$DTOHouseToJson(DTOHouse instance) => <String, dynamic>{

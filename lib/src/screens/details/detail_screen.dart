@@ -16,7 +16,9 @@ class DetailScreen extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: DetailHouseView(houseId: houseId,),
+        child: DetailHouseView(
+          houseId: houseId,
+        ),
       ),
     );
   }

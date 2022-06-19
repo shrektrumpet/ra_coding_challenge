@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ra_coding_challenge/src/features/houses/cubit/houses_cubit.dart';
-import 'package:ra_coding_challenge/src/features/houses/repository/houses_repository.dart';
 import 'package:ra_coding_challenge/src/routing/app_router.dart';
 
 import '../models/house.dart';

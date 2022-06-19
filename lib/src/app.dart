@@ -14,9 +14,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final retrofit = GotRetrofit(baseUrl: "https://www.anapioficeandfire.com");
+    final houseRepository = HousesRepository(gotRetrofit: retrofit);
 
     return BlocProvider(
-      create: (context) => HousesCubit(housesRepository: HousesRepository(gotRetrofit: retrofit)),
+      create: (context) => HousesCubit(housesRepository: houseRepository),
       child: MaterialApp.router(
         routeInformationParser: goRouter.routeInformationParser,
         routerDelegate: goRouter.routerDelegate,

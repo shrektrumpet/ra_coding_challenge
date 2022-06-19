@@ -1,6 +1,22 @@
 import 'package:ra_coding_challenge/src/services/got/retrofit/models/dto_house.dart';
 
-class House extends DTOHouse {
+class House {
+  final String url;
+  final String name;
+  final String region;
+  final String coatOfArms;
+  final String words;
+  final List<String> titles;
+  final List<String> seats;
+  final String currentLordUrl;
+  final String heirUrl;
+  final String overlordUrl;
+  final String founded;
+  final String founderUrl;
+  final String diedOut;
+  final List<String> ancestralWeapons;
+  final List<String> cadetBranchesUrls;
+  final List<String> swornMembersUrls;
   final String? currentLordName;
   final String? heirName;
   final String? overlordName;
@@ -9,22 +25,22 @@ class House extends DTOHouse {
   final List<String>? swornMembersNames;
 
   House({
-    required super.url,
-    required super.name,
-    required super.region,
-    required super.coatOfArms,
-    required super.words,
-    required super.titles,
-    required super.seats,
-    required super.currentLordUrl,
-    required super.heirUrl,
-    required super.overlordUrl,
-    required super.founded,
-    required super.founderUrl,
-    required super.diedOut,
-    required super.ancestralWeapons,
-    required super.cadetBranchesUrls,
-    required super.swornMembersUrls,
+    required this.url,
+    required this.name,
+    required this.region,
+    required this.coatOfArms,
+    required this.words,
+    required this.titles,
+    required this.seats,
+    required this.currentLordUrl,
+    required this.heirUrl,
+    required this.overlordUrl,
+    required this.founded,
+    required this.founderUrl,
+    required this.diedOut,
+    required this.ancestralWeapons,
+    required this.cadetBranchesUrls,
+    required this.swornMembersUrls,
     this.currentLordName,
     this.heirName,
     this.overlordName,
