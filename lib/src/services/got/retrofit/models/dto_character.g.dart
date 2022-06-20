@@ -10,7 +10,6 @@ DTOCharacter _$DTOCharacterFromJson(Map<String, dynamic> json) => DTOCharacter(
       name: json['name'] as String,
     );
 
-Map<String, dynamic> _$DTOCharacterToJson(DTOCharacter instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$DTOCharacterToJson(DTOCharacter instance) => <String, dynamic>{
       'name': instance.name,
     };
