@@ -12,6 +12,7 @@ class App extends StatelessWidget {
     return MaterialApp.router(
       routeInformationParser: goRouter.routeInformationParser,
       routerDelegate: goRouter.routerDelegate,
+      routeInformationProvider: goRouter.routeInformationProvider,
       localizationsDelegates: const [
         Localize.delegate,
         GlobalMaterialLocalizations.delegate,
