@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../features/houses/widgets/houses_overview_list.dart';
+import '../../features/houses/widgets/houes_overview_list/houses_overview_list.dart';
 import '../../localization/generated/l10n.dart';
 
 class MasterScreen extends StatelessWidget {
